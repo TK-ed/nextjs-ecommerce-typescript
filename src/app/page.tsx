@@ -11,8 +11,7 @@ export default async function Home() {
   });
 
   return (
-    <div>
-      Products:
+    <>
       <div className="hero rounded-xl bg-base-200">
         <div className="hero-content flex flex-col lg:flex-row">
           <Image
@@ -40,6 +39,6 @@ export default async function Home() {
           <Card product={product} key={product.id} />
         ))}
       </div>
-    </div>
+    </>
   );
 }
