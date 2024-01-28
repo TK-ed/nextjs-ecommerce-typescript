@@ -15,19 +15,19 @@ async function addProduct(formData: FormData) {
   const price = Number(formData.get("price") || 0);
 
   if (!name || !description || !imageUrl || !price)
-    throw Error('Missing Fields required')
+    throw Error("Missing Fields required");
 
   await prisma.product.create({
-    data: {name, description, imageUrl, price},
+    data: { name, description, imageUrl, price },
   });
 
-  redirect('/')
+  redirect("/");
 }
 
 export default function AddProductPage() {
   return (
     <>
-      <h1 className="text-3xl font-bold mb-3">Add product</h1>
+      <h1 className="mb-3 text-3xl font-bold">Add product</h1>
       <form action={addProduct}>
         <input
           type="text"
@@ -54,9 +54,7 @@ export default function AddProductPage() {
           className="input input-bordered mb-3 w-full"
           placeholder="Price"
         />
-        <Button className="btn-block">
-          Add Product!!
-        </Button>
+        <Button className="btn-block">Add Product!!</Button>
       </form>
     </>
   );

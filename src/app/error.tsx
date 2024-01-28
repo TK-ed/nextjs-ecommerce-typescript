@@ -1,7 +1,5 @@
-export default function Error() {
-  return (
-    <>
-      <h3 className="text-center text-3xl">Sorry!! Something`s Fishy here!!</h3>
-    </>
-  );
+"use client";
+
+export default function ErrorPage() {
+  return <div>Something went wrong. Please refresh the page.</div>;
 }
